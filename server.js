@@ -9,14 +9,18 @@ app.post('/usuarios', (request, response) => {
 
     users.push(request.body)
 
-    response.send('Ok post deu certo')
+    response.status(201).json(request.body)
 })
 
 app.get('/usuarios', (request, response) => { 
-    response.json(users)
+    response.status(200).json(users)
 })
 
-app.listen(3000) /* porta em que o servidor vai rodar */
+app.listen(3002) /* porta em que o servidor vai rodar */
+
+
+/* Usuário: mayaracortes
+Senha: senhabanco */
 
 /* 
 HTTP Métodos
